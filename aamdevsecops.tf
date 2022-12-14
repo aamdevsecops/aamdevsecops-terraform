@@ -1,4 +1,4 @@
-# Create the maamdevsecops network
+# Create the aamdevsecops network
 resource "google_compute_network" "aamdevsecops" {
   name = "aamdevsecops"
   # Create auto-mode subnets 

@@ -19,14 +19,14 @@ resource "google_compute_firewall" "aamdevsecops-allow-http-ssh-rdp-icmp" {
   source_ranges = ["0.0.0.0/0"]
 }
 # Create the aamdevsecops-us-vm instance
-module "mynet-us-vm" {
+module "aamdevsecops-us-vm" {
   source           = "./instance"
   instance_name    = "aamdevsecops-us-vm"
   instance_zone    = "us-central1-a"
   instance_network = google_compute_network.aamdevsecops.self_link
 }
 # Create the aamdevsecops-eu-vm" instance
-module "mynet-eu-vm" {
+module "aamdevsecops-eu-vm" {
   source           = "./instance"
   instance_name    = "aamdevsecops-eu-vm"
   instance_zone    = "europe-west1-c"

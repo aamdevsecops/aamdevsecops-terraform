@@ -6,7 +6,7 @@ resource "google_compute_network" "aamdevsecops" {
 }
 # Add a firewall rule to allow HTTP, SSH, RDP and ICMP traffic on mynetwork
 resource "google_compute_firewall" "aamdevsecops-allow-http-ssh-rdp-icmp" {
-  name = "mynetwork-allow-http-ssh-rdp-icmp"
+  name = "aamdevsecops-allow-http-ssh-rdp-icmp"
   # allow rule for ssh, HTTP, RDP and ICMP
   network = google_compute_network.aamdevsecops.self_link
   allow {

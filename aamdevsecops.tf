@@ -4,7 +4,7 @@ resource "google_compute_network" "aamdevsecops" {
   # Create auto-mode subnets 
   auto_create_subnetworks = "true"
 }
-# Add a firewall rule to allow HTTP, SSH, RDP and ICMP traffic on mynetwork
+# Add a firewall rule to allow HTTP, SSH, RDP and ICMP traffic on aamdevsecops
 resource "google_compute_firewall" "aamdevsecops-allow-http-ssh-rdp-icmp" {
   name = "aamdevsecops-allow-http-ssh-rdp-icmp"
   # allow rule for ssh, HTTP, RDP and ICMP
